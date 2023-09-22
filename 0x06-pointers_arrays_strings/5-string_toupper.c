@@ -1,17 +1,18 @@
 #include "main.h"
 /**
-* _islower - checks for lowercase character
-* @c: character to check
+* string_toupper - change all lowercase to uppercase
+* @n: pointer
 * Return: (0)
 */
-static int _islower(int g)
-{
-return (g >= 'a' && g <= 'z');
-}
-char *string_toupper(char *s)
+char *string_toupper(char *n)
 {
 int a;
-for (a = 0; s[a]; ++a)
-_islower(s[a]) ? s[a] -= 32 : s[a];
-return (s);
+a = 0;
+while (n[a] != '\0')
+{
+if (n[a] >= 'a' && n[a] <= 'z')
+n[a] = n[a] - 32;
+a++;
+}
+return (n);
 }
