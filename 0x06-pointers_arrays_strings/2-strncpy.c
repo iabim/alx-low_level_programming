@@ -17,7 +17,7 @@ g++;
 }
 while (g < n)
 {
-dest[j] = '\0';
+dest[g] = '\0';
 g++;
 }
 return (dest);
